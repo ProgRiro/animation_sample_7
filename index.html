@@ -1,0 +1,65 @@
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circleParent {
+        position: relative;
+        border: 2px solid black;
+        height: 500px;
+        width: 800px;
+        background-color: rgba(51, 153, 255, .5);
+    }
+
+    .circleChild {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background-color: #3399FF;
+        animation: water 2.7s ease-out infinite normal;
+    }
+
+    .circleChild:nth-of-type(2) {
+        animation-delay: .4s;
+    }
+
+    .circleChild:nth-of-type(3) {
+        animation-delay: .8s;
+    }
+
+    .circleChild:nth-of-type(4) {
+        animation-delay: 1.2s;
+    }
+
+    .circleChild:nth-of-type(5) {
+        animation-delay: 1.6s;
+    }
+
+    @keyframes water {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(450);
+            opacity: 0;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="circleParent">
+        <span class="circleChild"></span>
+        <span class="circleChild"></span>
+        <span class="circleChild"></span>
+        <span class="circleChild"></span>
+        <span class="circleChild"></span>
+    </div>
+    <h1>Water</h1>
+</div>
